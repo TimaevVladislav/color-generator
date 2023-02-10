@@ -21,6 +21,7 @@ document.addEventListener("click", event => {
         copyToClickboard(event.target.textContent)
     }
 })
+
 const generateRandomColor = () => {
     const hexCodes = "0123456789ABCDEF"
     let color = ""
@@ -29,6 +30,7 @@ const generateRandomColor = () => {
     }
     return "#" + color
 }
+
 const setRandomColors = (isInitial) => {
     const colors = isInitial ? getColorsFromHash() : []
 
@@ -61,6 +63,7 @@ const setRandomColors = (isInitial) => {
 
     updateColorsHash(colors)
 }
+
 const setTextColor = (text, color) => {
    const luminance = chroma(color).luminance
    text.style.color = luminance > 0.5 ? "black" : "white"
